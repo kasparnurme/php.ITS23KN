@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teenuste leht</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
 </head>
 <body>
 <div class="container">
@@ -64,30 +65,67 @@
             </div>
         </div>
 
-        <h1>Auto liisingu kuumakse</h1>
+        <div class="container mt-5">
+        <h1 class="text">Auto liisingu kuumakse</h1>
         <form action="#" method="GET">
-          Auto hind: <input type="number" placeholder="5" name="teenus1"><br>
-          Sissemakse: <input type="number" placeholder="250" name="teenus2"><br>
-          Makseperiood (kuudes):<input type="number" placeholder="24" name="teenus3"><br>
-          <input type="submit" value="Saada">
-      </form>
-<?php
-if (!empty($_GET['hind']) &&
-    !empty($_GET['sissemakse']) &&
-    !empty($_GET['periood'])) {
-   
- 
-$t1 = $_GET['hind'];
-$t2 = $_GET['sissemakse'];
-$t3 = $_get['periood'];
-$kokku = ($t1-$t2)/$t3;
+            <div class="form-group">
+                <label for="hind">Auto hind:</label>
+                <input type="number" class="form-control" id="hind" style="width: 200px;" placeholder="5" name="hind" required>
+            </div>
+            <div class="form-group">
+                <label for="sissemakse">Sissemakse:</label>
+                <input type="number" class="form-control" id="sissemakse" style="width: 200px;" placeholder="250" name="sissemakse" required>
+            </div>
+            <div class="form-group">
+                <label for="periood">Makseperiood (kuudes):</label>
+                <select class="form-control" id="periood" style="width: 200px;" name="periood" required>
+                  <option value="" disabled selected hidden>Vali makseperiood</option>
+                    <option value="12">12</option>
+                    <option value="18">18</option>
+                    <option value="24">24</option>
+                    <option value="30">30</option>
+                    <option value="36">36</option>
+                    <option value="42">42</option>
+                    <option value="48">48</option>
+                    <option value="54">54</option>
+                    <option value="60">60</option>
+                    <option value="66">66</option>
+                    <option value="72">72</option>
+                    <option value="78">78</option>
+                    <option value="84">84</option>
+                    <option value="90">90</option>
+                    <option value="96">96</option>
+                    <option value="102">102</option>
+                    <option value="108">108</option>
+                    <option value="114">114</option>
+                    <option value="120">120</option>
+                </select>
+            </div> <br>
+            <button type="submit" class="btn btn-primary">Saada</button>
+        </form>
 
-echo "Auto hind $t1 €"
-echo "Sissemakse $t2 €"
-echo "€/kuus: $kokku €";
- }
+        <?php
+        if (!empty($_GET['hind']) &&
+            !empty($_GET['sissemakse']) &&
+            !empty($_GET['periood'])) {
 
-?>
+            $t1 = $_GET['hind'];
+            $t2 = $_GET['sissemakse'];
+            $t3 = $_GET['periood'];
+            $kokku = number_format(($t1 - $t2) / $t3, 2);
+
+            if ($kokku <= 0) {
+                echo '<div class="alert alert-danger mt-3" role="alert">';
+                echo "Kontrolli numbreid!";
+                echo '</div>';
+            } else {
+                echo '<div class="alert alert-success mt-3" role="alert">';
+                echo "€/kuus: $kokku €";
+                echo '</div>';
+            }
+        }
+        ?>
+    </div>
  
 </div>
 

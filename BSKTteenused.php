@@ -82,7 +82,9 @@ $t2 = $_GET['sissemakse'];
 $t3 = $_get['periood'];
 $kokku = ($t1-$t2)/$t3;
 
-echo "Hind: $kokku €";
+echo "Auto hind $t1 €"
+echo "Sissemakse $t2 €"
+echo "€/kuus: $kokku €";
  }
 
 ?>

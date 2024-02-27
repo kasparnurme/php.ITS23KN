@@ -102,6 +102,31 @@
     </div>
 </div>
 
+<h1 class="text-center mb-4" style="margin-top: 25px;">Meie töötajad</h1>
+<div class="row g-4">
+<?php
+    $pilditeekond = 'töötaja_profiilid/';
+    $domeen = 'sinunimi.ee';
+
+    $pildid = glob($pilditeekond . '*.{jpg}', GLOB_BRACE);
+
+    foreach ($pildid as $pilt) {
+        $failinimi = pathinfo($pilt, PATHINFO_FILENAME);
+        $nimi = ucfirst($failinimi);
+        $email = $failinimi . '@' . $domeen;
+
+        echo '
+            <div class="card col-md-2 border-0 text-center">
+                <img src="' . $pilt . '" class="card-img-top img-fluid" alt="' . $nimi . '">
+                <div class="card-body">
+                    <h5 class="card-title">' . $nimi . '</h5>
+                    <p class="card-text" style="white-space: nowrap;">' . $email . '</p>
+                </div>
+            </div>
+        ';
+    }
+    ?>
+</div>
         
 </div>
 

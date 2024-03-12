@@ -44,8 +44,7 @@
   </div>
 </nav>
 
-<h1>Postituse lisamine</h1>
-
+<h1>Postituse lisamineasasas</h1>
 
 <form action="" method="post" enctype="multipart/form-data">
     <label for="pealkiri">Postituse pealkiri</label>

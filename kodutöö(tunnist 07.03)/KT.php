@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="et">
     <head>
-        <title>Title</title>
+        <title>KT</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -64,7 +64,7 @@
         <a class="nav-link" aria-current="page" href="#">AVALEHT</a>
         <a class="nav-link" href="#">MINUST</a>
         <a class="nav-link" href="#">KONTAKT</a>
-        <a class="nav-link" href="#">ADMIN</a>
+        <a class="nav-link" href="admin.php">ADMIN</a>
       </div>
     </div>
   </div>
@@ -75,7 +75,7 @@
     <div class="p-5 mb-4">
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">Praktika Maltal</h1>
-        <p>asgasgsfgas</p>
+        <p>hjfjffkj</p>
 
       </div>
     </div>

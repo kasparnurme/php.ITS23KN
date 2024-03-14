@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="et">
     <head>
-        <title>Tunnitöö 3</title>
+        <title>Title</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -16,29 +16,38 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-    </head>
+        <style>
+.banner{
+    background-image:url("https://usupdates.com/wp-content/uploads/2019/05/4-1536x1026.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 
+}
+
+.pealkiri{
+    color:#fff;
+}
+.navbar-brand{
+    color:#fff;
+    font-weight:600;
+}
+.navbar-nav a{
+    color:#fff;
+    font-weight:600;
+}
+.nupp{
+    background-color:#0085a1;
+    color:#fff;
+    border-radius:0;
+    font-weight:600;
+    font-variant-caps: all-small-caps;
+}
+.posth{
+    font-weight:700 !important;
+}
+
+        </style>
+    </head>
     <body>
-      <div class="container">
-        
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="H03.php">Avaleht</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="?page=services">Teenused</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="?page=contact">Kontakt</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+
+

@@ -27,7 +27,7 @@
         Otsi: <input type="text" name="s">
         <input type="submit" value="Otsi">
     </form>
-<div class="row row-cols-1 row-cols-md-6 g-4 pt-4">
+<div class="row row-cols-1 row-cols-md-5 g-4 pt-4">
       <?php
 //lisamine
 if(!empty($_GET["lisa"])){
@@ -92,6 +92,7 @@ if(!empty($_GET["lisa"])){
                     <p class="card-text">'.$rida['hind'].'€</p>
                     <a href="#" class="btn btn-danger">Osta</a>
                     <a href="index.php?del=kustuta&id='.$rida['id'].'" class="btn btn-warning">Kustuta</a>
+                    <a href="edit.php?del=kustuta&id='.$rida['id'].'" class="btn btn-primary">Uuenda</a>
                 </div>
                 </div>
             </div>
